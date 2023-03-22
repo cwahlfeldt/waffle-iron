@@ -1,16 +1,12 @@
 backend:
     # Use netlify identity as backend
     name: git-gateway
-    branch: dev
+    branch: master
     ### enable below lines for github integration ###
-    repo: cwahlfeldt/waffle-iron
-
-public_folder: media
-media_folder: src/media
-media_library:
-    name: uploadcare
-    config:
-        publicKey: demopublickey
+    # name: github
+    # repo: surjithctly/neat-starter
+media_folder: 'src/static/img'
+public_folder: '/static/img'
 
 # Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
@@ -20,8 +16,9 @@ collections:
       name: 'blog'
       folder: 'src/posts'
       create: true
+      preview_path: theme/posts
       editor:
-          preview: false
+          preview: true
       fields:
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Description', name: 'description', widget: 'string' }

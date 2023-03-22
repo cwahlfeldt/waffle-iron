@@ -1,3 +1,6 @@
 {
-    "layout": "post-single"
+    "layout": "posts",
+    "tags": [
+        "post"
+    ]
 }
