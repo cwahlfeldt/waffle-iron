@@ -26,7 +26,6 @@ module.exports = function (config) {
 
     // Copy Static Files to /_Site
     config.addPassthroughCopy({
-        './src/admin/config.yml': './admin/config.yml',
         './node_modules/prismjs/themes/prism-tomorrow.css':
             './static/css/prism-tomorrow.css',
     })
@@ -59,6 +58,7 @@ module.exports = function (config) {
             includes: 'theme',
             input: 'src',
             output: 'public',
+            data: 'data',
         },
         htmlTemplateEngine: 'njk',
     }

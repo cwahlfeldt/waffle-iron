@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "start": "npm-run-all --parallel css eleventy browsersync",
+    "start": "npm-run-all --parallel css eleventy yaml browsersync",
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
+    "yaml": "yimp -i ./src/admin/config.yml -o ./public/admin/config.yml",
     "css": "postcss src/static/css/tailwind.css --o public/static/css/style.css --watch",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production tailwindcss -i src/static/css/tailwind.css -o public/static/css/style.css",
     "browsersync": "browser-sync start --server public --files public --port 8080 --no-notify --no-open"
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21"
+    "postcss": "^8.4.21",
+    "yaml-import": "^2.0.0"
   }
 }
