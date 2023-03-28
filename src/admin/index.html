@@ -7,26 +7,11 @@
     </head>
     <body>
         <!-- Include the script that builds the page and powers Netlify CMS -->
-        <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/nunjucks@3.2.3/browser/nunjucks.min.js"></script>
         <!-- Netlify Identity Widget -->
+        <script type="text/javascript" src="index.js"></script>
         <script
             type="text/javascript"
             src="https://identity.netlify.com/v1/netlify-identity-widget.js"
         ></script>
-        <script>
-            CMS.registerPreviewStyle('/static/css/prisma-tomorrow.css')
-            CMS.registerPreviewStyle('/static/css/style.css')
-
-            const BlogPreview = (props) => {
-                return h('div', {
-                    dangerouslySetInnerHTML: {
-                        __html: nunjucks.render('../../src/theme/default.html'),
-                    },
-                })
-            }
-
-            CMS.registerPreviewTemplate('blog', BlogPreview)
-        </script>
     </body>
 </html>

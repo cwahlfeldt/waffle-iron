@@ -32,6 +32,7 @@ module.exports = function (config) {
 
     // Copy Image Folder to /_site
     config.addPassthroughCopy('./src/static/img')
+    config.addPassthroughCopy('./src/theme')
 
     // Copy favicon to route of /_site
     config.addPassthroughCopy('./src/favicon.ico')
