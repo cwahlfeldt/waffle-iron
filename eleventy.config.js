@@ -32,7 +32,6 @@ module.exports = function (config) {
 
     // Copy Image Folder to /_site
     config.addPassthroughCopy('./src/static/img')
-    config.addPassthroughCopy('./src/theme')
 
     // Copy favicon to route of /_site
     config.addPassthroughCopy('./src/favicon.ico')
@@ -61,6 +60,6 @@ module.exports = function (config) {
             output: 'public',
             data: 'data',
         },
-        htmlTemplateEngine: 'njk',
+        htmlTemplateEngine: 'js',
     }
 }
